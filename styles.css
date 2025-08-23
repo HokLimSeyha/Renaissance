@@ -12,14 +12,16 @@
 
 :root {
     /* Renaissance Color Palette */
-    --color-primary: #6B4E3D; /* Chestnut Umber */
-    --color-secondary: #B08D57; /* Gilded Ochre */
-    --color-accent: #8A1538; /* Crimson/Burgundy */
-    --color-background: #F4EAD2; /* Parchment */
+    --color-primary: #192B49; /* Chestnut Umber */
+    --color-secondary: #4A698E; /* Gilded Ochre */
+    --color-accent: #ebc270; /* Crimson/Burgundy */
+    --color-background: #FDFBFC; /* Parchment */
     --color-text: #2A2A2A; /* Charcoal */
-    --color-highlight: #C9D3DF; /* Desaturated Fresco Blue */
-    --color-gold: #D4AF37; /* Gentle Gold Accent */
+    --color-highlight:  #C9D3DF; /* Desaturated Fresco Blue */
+    --color-gold: #ffc739; /* Gentle Gold Accent */
     --color-white: #FFFFFF;
+    --color-darkbc: #ffffff;
+    --color-price: #a4853b;
     
     /* Typography Scale */
     --font-display: 'Cinzel', 'Cormorant Garamond', serif;
@@ -61,12 +63,7 @@ body {
     font-size: var(--font-size-base);
     line-height: 1.7;
     color: var(--color-text);
-    background-color: var(--color-background);
-    background-image: 
-        linear-gradient(45deg, rgba(212, 175, 55, 0.05) 25%, transparent 25%, transparent 75%, rgba(212, 175, 55, 0.05) 75%),
-        linear-gradient(-45deg, rgba(212, 175, 55, 0.05) 25%, transparent 25%, transparent 75%, rgba(212, 175, 55, 0.05) 75%);
-    background-size: 60px 60px;
-    background-position: 0 0, 30px 30px;
+    background-color: rgb(94, 34, 12);
 }
 
 /* Typography Elements */
@@ -120,6 +117,7 @@ a:hover {
 
 /* Layout Containers */
 .container {
+    min-width: 100px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
@@ -134,7 +132,7 @@ a:hover {
    ========================================================================== */
 
 .main-header {
-    background: linear-gradient(135deg, var(--color-background) 0%, rgba(244, 234, 210, 0.95) 100%);
+    background: linear-gradient(135deg, var(--color-background) 0%, rgba(188, 194, 201, 0.95) 60%);
     border-bottom: var(--border-medium);
     box-shadow: var(--shadow-soft);
     position: sticky;
@@ -171,8 +169,7 @@ a:hover {
     font-family: var(--font-body);
     font-size: var(--font-size-sm);
     font-style: italic;
-    color: var(--color-secondary);
-    text-transform: lowercase;
+    color: #1D2E54;
     letter-spacing: 1px;
 }
 
@@ -196,8 +193,9 @@ a:hover {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-accent);
-    background: rgba(138, 21, 56, 0.1);
+    color: var(--color-white);
+    background: #e5a8251a;
+    font-weight: bolder;
 }
 
 .nav-link:after {
@@ -207,7 +205,7 @@ a:hover {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--color-gold);
+    background: #BC9E60;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -244,7 +242,7 @@ a:hover {
     text-shadow: 2px 2px 8px rgba(107, 78, 61, 0.2);
 }
 
-.hero-description {
+.hero-desitem-description {
     font-size: var(--font-size-xl);
     color: var(--color-text);
     line-height: 1.6;
@@ -378,7 +376,7 @@ a:hover {
     margin-bottom: var(--spacing-md);
 }
 
-.offering-description {
+.offering-desitem-description {
     font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--color-text);
@@ -393,24 +391,38 @@ a:hover {
     text-align: center;
     background: linear-gradient(135deg, rgba(201, 211, 223, 0.2) 0%, rgba(244, 234, 210, 0.6) 100%);
     border-bottom: var(--border-thin);
+    position: relative;
+    padding: 100px 20px;
+}
+
+.header-image {
+    background-image: url(img/thelastsupper.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 8px;
+    border-bottom: var(--border-thin);
+    padding: 100px 20px;
+    opacity: 90%;
 }
 
 .page-title {
-    font-size: var(--font-size-4xl);
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-5xl);
+    color: var(--color-darkbc);
+    margin-bottom: 1px;
 }
 
 .page-subtitle {
     font-size: var(--font-size-xl);
-    color: var(--color-secondary);
+    color: var(--color-darkbc);
     font-style: italic;
     margin-bottom: var(--spacing-lg);
 }
 
 .header-ornament {
-    width: 150px;
-    height: auto;
+    width: 100%;
+    height: 100px;
     opacity: 0.7;
 }
 
@@ -427,7 +439,7 @@ a:hover {
     font-size: var(--font-size-3xl);
     color: var(--color-accent);
     margin-bottom: var(--spacing-2xl);
-    text-transform: lowercase;
+    text-transform: lowercase; 
     letter-spacing: 2px;
 }
 
@@ -439,7 +451,8 @@ a:hover {
 }
 
 .menu-item {
-    background: rgba(255, 255, 255, 0.8);
+    gap: 20px;
+    background: #ffffffcc;
     border: var(--border-thin);
     border-radius: var(--border-radius);
     padding: var(--spacing-xl);
@@ -450,6 +463,8 @@ a:hover {
 
 .menu-item:hover {
     transform: translateY(-3px);
+    transform: translateX(-3px);
+    background-color: #edca91;
     box-shadow: var(--shadow-medium);
 }
 
@@ -465,11 +480,21 @@ a:hover {
     pointer-events: none;
 }
 
+.menu-image {
+    width: 100%;
+    height: 150px;
+    padding: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .item-header {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: var(--spacing-md);
+    margin-top: 5px;
     border-bottom: 1px dotted var(--color-secondary);
     padding-bottom: var(--spacing-sm);
 }
@@ -480,19 +505,29 @@ a:hover {
     margin: 0;
 }
 
+.item-name:hover {
+    font-size: var(--font-size-xl);
+    color: white;
+    margin: 0;
+}
+
 .item-price {
     font-family: var(--font-display);
     font-size: var(--font-size-lg);
-    color: var(--color-accent);
+    color: var(--color-price);
     font-weight: 600;
+    margin-left: 10px;
+    float: right;
 }
 
 .item-description {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-l);
+    font-weight: 400;
     line-height: 1.6;
     color: var(--color-text);
     text-align: justify;
-    margin: 0;
+    margin: 1.6;
+
 }
 
 /* ==========================================================================
@@ -710,7 +745,7 @@ a:hover {
         font-size: var(--font-size-3xl);
     }
     
-    .hero-description {
+    .hero-desitem-description {
         font-size: var(--font-size-lg);
     }
     
