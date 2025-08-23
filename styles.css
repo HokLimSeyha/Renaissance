@@ -12,7 +12,7 @@
 
 :root {
     /* Renaissance Color Palette */
-    --color-primary: #192B49; /* Chestnut Umber */
+    --color-primary: #111f38; /* Chestnut Umber */
     --color-secondary: #4A698E; /* Gilded Ochre */
     --color-accent: #ebc270; /* Crimson/Burgundy */
     --color-background: #FDFBFC; /* Parchment */
@@ -63,7 +63,8 @@ body {
     font-size: var(--font-size-base);
     line-height: 1.7;
     color: var(--color-text);
-    background-color: rgb(94, 34, 12);
+    background-position: center;
+    background-color: rgb(208, 200, 197);
 }
 
 /* Typography Elements */
@@ -132,7 +133,11 @@ a:hover {
    ========================================================================== */
 
 .main-header {
-    background: linear-gradient(135deg, var(--color-background) 0%, rgba(188, 194, 201, 0.95) 60%);
+    background-image: url(img/bg06.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 90%;
     border-bottom: var(--border-medium);
     box-shadow: var(--shadow-soft);
     position: sticky;
@@ -167,9 +172,9 @@ a:hover {
 
 .tagline {
     font-family: var(--font-body);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-m);
     font-style: italic;
-    color: #1D2E54;
+    color: #070d1a;
     letter-spacing: 1px;
 }
 
@@ -181,6 +186,7 @@ a:hover {
 
 .nav-link {
     font-family: var(--font-display);
+    font-weight: bold;
     font-size: var(--font-size-lg);
     color: var(--color-primary);
     text-transform: lowercase;
@@ -194,7 +200,7 @@ a:hover {
 .nav-link:hover,
 .nav-link.active {
     color: var(--color-white);
-    background: #e5a8251a;
+    background: #0000001a;
     font-weight: bolder;
 }
 
@@ -407,6 +413,18 @@ a:hover {
     opacity: 90%;
 }
 
+.header-about {
+    background-image: url(img/painting.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: top;
+    color: white;
+    border-radius: 8px;
+    border-bottom: var(--border-thin);
+    padding: 100px 20px;
+    opacity: 90%;
+}
+
 .page-title {
     font-size: var(--font-size-5xl);
     color: var(--color-darkbc);
@@ -437,7 +455,7 @@ a:hover {
 .menu-category-title {
     text-align: center;
     font-size: var(--font-size-3xl);
-    color: var(--color-accent);
+    color: var(--color-price);
     margin-bottom: var(--spacing-2xl);
     text-transform: lowercase; 
     letter-spacing: 2px;
@@ -661,11 +679,12 @@ a:hover {
    ========================================================================== */
 
 .main-footer {
-    background: linear-gradient(135deg, var(--color-primary) 0%, rgba(107, 78, 61, 0.9) 100%);
+    background-image: url(img/bg07.jpg);
     color: var(--color-background);
     padding: var(--spacing-3xl) 0;
     border-top: var(--border-medium);
     margin-top: var(--spacing-4xl);
+    opacity: 90%;
 }
 
 .footer-content {
@@ -692,7 +711,7 @@ a:hover {
 }
 
 .footer-address {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .footer-hours {
@@ -700,7 +719,7 @@ a:hover {
 }
 
 .footer-contact {
-    color: var(--color-secondary);
+    color: var(--color-white);
 }
 
 .footer-ornament {
