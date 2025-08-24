@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Renaissance Coffee Shop Styles
-   A celebration of classical design and timeless elegance
-   ========================================================================== */
 
-/* CSS Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,19 +6,17 @@
 }
 
 :root {
-    /* Renaissance Color Palette */
-    --color-primary: #111f38; /* Chestnut Umber */
-    --color-secondary: #4A698E; /* Gilded Ochre */
-    --color-accent: #ebc270; /* Crimson/Burgundy */
-    --color-background: #FDFBFC; /* Parchment */
-    --color-text: #2A2A2A; /* Charcoal */
-    --color-highlight:  #C9D3DF; /* Desaturated Fresco Blue */
-    --color-gold: #ffc739; /* Gentle Gold Accent */
+    --color-primary: #111f38;
+    --color-secondary: #4A698E;
+    --color-accent: #ebc270;
+    --color-background: #FDFBFC;
+    --color-text: #2A2A2A;
+    --color-highlight:  #C9D3DF;
+    --color-gold: #ffc739;
     --color-white: #FFFFFF;
     --color-darkbc: #ffffff;
     --color-price: #a4853b;
     
-    /* Typography Scale */
     --font-display: 'Cinzel', 'Cormorant Garamond', serif;
     --font-body: 'EB Garamond', 'Libre Baskerville', serif;
     --font-size-xs: 0.75rem;
@@ -36,7 +29,6 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
-    /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -46,18 +38,15 @@
     --spacing-3xl: 4rem;
     --spacing-4xl: 6rem;
     
-    /* Shadows */
     --shadow-soft: 0 2px 8px rgba(107, 78, 61, 0.1);
     --shadow-medium: 0 4px 16px rgba(107, 78, 61, 0.15);
     --shadow-large: 0 8px 32px rgba(107, 78, 61, 0.2);
     
-    /* Borders */
     --border-thin: 1px solid var(--color-gold);
     --border-medium: 2px solid var(--color-gold);
     --border-radius: 4px;
 }
 
-/* Base Typography */
 body {
     font-family: var(--font-body);
     font-size: var(--font-size-base);
@@ -66,8 +55,7 @@ body {
     background-position: center;
     background-color: rgb(208, 200, 197);
 }
-
-/* Typography Elements */
+    
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 600;
@@ -86,7 +74,6 @@ p {
     margin-bottom: var(--spacing-md);
 }
 
-/* Drop Cap Styling */
 .drop-cap {
     float: left;
     font-family: var(--font-display);
@@ -104,7 +91,6 @@ p {
     text-indent: 0;
 }
 
-/* Links */
 a {
     color: var(--color-accent);
     text-decoration: none;
@@ -116,21 +102,17 @@ a:hover {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout Containers */
 .container {
     min-width: 100px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+
 }
 
 .main-content {
     min-height: calc(100vh - 200px);
 }
-
-/* ==========================================================================
-   Header and Navigation
-   ========================================================================== */
 
 .main-header {
     background-image: url(img/bg06.jpg);
@@ -221,10 +203,6 @@ a:hover {
     width: 80%;
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
-
 .hero {
     padding: var(--spacing-4xl) 0;
     background: linear-gradient(135deg, rgba(201, 211, 223, 0.3) 0%, rgba(244, 234, 210, 0.8) 100%);
@@ -250,9 +228,9 @@ a:hover {
 
 .hero-desitem-description {
     font-size: var(--font-size-xl);
-    color: var(--color-text);
+    color: var(--color-white);
     line-height: 1.6;
-    text-align: justify;
+    text-align: center;
 }
 
 .hero-image {
@@ -265,10 +243,6 @@ a:hover {
     height: auto;
     filter: drop-shadow(0 4px 8px rgba(107, 78, 61, 0.3));
 }
-
-/* ==========================================================================
-   Ornamental Borders and Decorative Elements
-   ========================================================================== */
 
 .ornamental-border {
     position: relative;
@@ -307,14 +281,10 @@ a:hover {
     padding: var(--spacing-2xl);
 }
 
-/* ==========================================================================
-   Sections and Content Areas
-   ========================================================================== */
-
 .introduction,
 .about-section,
 .philosophy-section {
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-xl) 1;
 }
 
 .section-title {
@@ -342,10 +312,6 @@ a:hover {
     text-align: justify;
     margin-bottom: var(--spacing-lg);
 }
-
-/* ==========================================================================
-   Featured Offerings Grid
-   ========================================================================== */
 
 .featured-offerings {
     padding: var(--spacing-4xl) 0;
@@ -388,10 +354,6 @@ a:hover {
     color: var(--color-text);
 }
 
-/* ==========================================================================
-   Page Headers
-   ========================================================================== */
-
 .page-header {
     padding: var(--spacing-4xl) 0 var(--spacing-2xl) 0;
     text-align: center;
@@ -425,6 +387,25 @@ a:hover {
     opacity: 90%;
 }
 
+.hero-index {
+    background-image: url(img/indexbg.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: top;
+    color: white;
+    border-radius: 8px;
+    border-bottom: var(--border-thin);
+    padding: 100px 20px;
+    opacity: 90%;
+}
+
+.hero-title-index {
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 2px 2px 8px rgba(107, 78, 61, 0.2);
+}
+
 .page-title {
     font-size: var(--font-size-5xl);
     color: var(--color-darkbc);
@@ -443,10 +424,6 @@ a:hover {
     height: 100px;
     opacity: 0.7;
 }
-
-/* ==========================================================================
-   Menu Styles
-   ========================================================================== */
 
 .menu-section {
     padding: var(--spacing-3xl) 0;
@@ -548,10 +525,6 @@ a:hover {
 
 }
 
-/* ==========================================================================
-   About Page Styles
-   ========================================================================== */
-
 .team-section {
     padding: var(--spacing-4xl) 0;
     background: rgba(255, 255, 255, 0.3);
@@ -566,6 +539,7 @@ a:hover {
 
 .team-member {
     display: flex;
+    flex-direction: column;
     gap: var(--spacing-lg);
     background: rgba(255, 255, 255, 0.8);
     border: var(--border-thin);
@@ -573,6 +547,7 @@ a:hover {
     padding: var(--spacing-2xl);
     box-shadow: var(--shadow-soft);
     transition: all 0.3s ease;
+    align-items: center;
 }
 
 .team-member:hover {
@@ -580,11 +555,43 @@ a:hover {
     box-shadow: var(--shadow-medium);
 }
 
-.member-image-placeholder {
+.member-image-seyha {
     width: 80px;
     height: 80px;
+    background-image: url(img/me.jpg);
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 3px solid var(--color-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+.member-image-eavheang {
+    width: 80px;
+    height: 80px;
+    background-image: url(img/heang.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 3px solid var(--color-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+.member-image-kimchea {
+    width: 80px;
+    height: 80px;
+    background-image: url(img/kimchea.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,6 +616,7 @@ a:hover {
     font-size: var(--font-size-xl);
     color: var(--color-primary);
     margin-bottom: var(--spacing-xs);
+    text-align: center;
 }
 
 .member-role {
@@ -631,12 +639,25 @@ a:hover {
     font-family: var(--font-body);
     font-size: var(--font-size-xl);
     font-style: italic;
-    color: var(--color-accent);
+    color: var(--color-price);
     text-align: center;
     margin: var(--spacing-2xl) 0;
     padding: var(--spacing-xl);
     border-left: 4px solid var(--color-gold);
-    background: rgba(138, 21, 56, 0.05);
+    background: rgba(226, 158, 23, 0.05);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.philosophy-quote:hover {
+    font-family: var(--font-body);
+    font-size: var(--font-size-xl);
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+    margin: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl);
+    border-left: 4px solid var(--color-white);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
@@ -674,10 +695,6 @@ a:hover {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
 .main-footer {
     background-image: url(img/bg07.jpg);
     color: var(--color-background);
@@ -690,7 +707,7 @@ a:hover {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-ls);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -734,10 +751,6 @@ a:hover {
     filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(582%) hue-rotate(17deg) brightness(98%) contrast(89%);
 }
 
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
-
 @media (max-width: 768px) {
     /* Mobile Navigation */
     .nav-container {
@@ -753,7 +766,6 @@ a:hover {
         font-size: var(--font-size-base);
     }
     
-    /* Hero Section */
     .hero-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
@@ -768,12 +780,10 @@ a:hover {
         font-size: var(--font-size-lg);
     }
     
-    /* Menu Grid */
     .menu-grid {
         grid-template-columns: 1fr;
     }
     
-    /* Team Grid */
     .team-grid {
         grid-template-columns: 1fr;
     }
@@ -783,7 +793,6 @@ a:hover {
         text-align: center;
     }
     
-    /* Typography */
     .page-title {
         font-size: var(--font-size-3xl);
     }
@@ -792,18 +801,15 @@ a:hover {
         font-size: var(--font-size-2xl);
     }
     
-    /* Spacing */
     .container {
         padding: 0 var(--spacing-md);
     }
     
-    /* Drop Cap */
     .drop-cap {
         font-size: 3rem;
         padding-right: var(--spacing-sm);
     }
     
-    /* Footer */
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -815,7 +821,6 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    /* Extra small screens */
     .hero {
         padding: var(--spacing-2xl) 0;
     }
@@ -852,10 +857,6 @@ a:hover {
         font-size: var(--font-size-2xl);
     }
 }
-
-/* ==========================================================================
-   Print Styles
-   ========================================================================== */
 
 @media print {
     .main-header,
@@ -895,11 +896,6 @@ a:hover {
     }
 }
 
-/* ==========================================================================
-   Accessibility Enhancements
-   ========================================================================== */
-
-/* Focus States */
 a:focus,
 .nav-link:focus {
     outline: 2px solid var(--color-accent);
@@ -907,7 +903,6 @@ a:focus,
     border-radius: var(--border-radius);
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -922,7 +917,6 @@ a:focus,
     }
 }
 
-/* High Contrast Mode */
 @media (prefers-contrast: high) {
     :root {
         --color-primary: #000000;
